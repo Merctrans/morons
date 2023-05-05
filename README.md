@@ -39,3 +39,4 @@ Name your server then modify in **Connection** tab \
 hostname/address : db \
 username: odoo \
 password: odoo \
+# moron
