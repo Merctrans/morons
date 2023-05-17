@@ -2,11 +2,11 @@ version: "3.1"
 services:
   web:
     image: odoo:16
-    container_name: web-odoo
+    container_name: web-odoo-morons
     depends_on:
       - db
     volumes:
-      - odoo-web-data:/var/lib/odoo
+      - odoo-web-data-morons:/var/lib/odoo
       - ./config:/etc/odoo
       - ./local-addons:/mnt/extra-addons
     environment:
@@ -16,18 +16,18 @@ services:
       - odoo
   db:
     image: postgres:13
-    container_name: db-odoo
+    container_name: db-odoo-morons
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
+      - odoo-db-data-morons:/var/lib/postgresql/data/pgdata
     networks:
       - odoo
   pgadmin:
-    container_name: pgadmin-odoo
+    container_name: pgadmin-odoo-morons
     image: dpage/pgadmin4
     environment:
       PGADMIN_DEFAULT_EMAIL: amdin@admin.com
@@ -43,7 +43,7 @@ services:
   proxy:
     depends_on:
             - web
-    container_name: odoo_proxy
+    container_name: odoo_proxy-morons
     build:
         context: .
         dockerfile: Dockerfile-nginx
@@ -58,6 +58,6 @@ networks:
 
 
 volumes:
-  odoo-web-data:
-  odoo-db-data:
+  odoo-web-data-morons:
+  odoo-db-data-morons:
   pgadmin:
