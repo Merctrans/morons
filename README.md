@@ -40,7 +40,7 @@ hostname/address : db \
 username: odoo \
 password: odoo \
 
-## MES Project Coding Conventions
+## MORONS Project Coding Conventions
 
 
 ## 1. Use Meaningful Class and Field Names
@@ -133,7 +133,7 @@ def _compute_child_workers(self):
 ```
 By adhering to these conventions, you ensure that your Odoo project's code is readable, understandable, and maintainable.
 
-# Gitflow Convention for MES Project
+# Gitflow Convention for MORONS Project
 
 1. **Branch Naming:**
    - `main`: Represents the production-ready codebase.
@@ -272,7 +272,7 @@ git merge origin/feature/user-authentication
 By following the Gitflow convention, you establish a structured workflow that promotes collaboration, code quality, and a consistent release process.
 
 
-# Deployment Convention with CI/CD for MES Project
+# Deployment Convention with CI/CD for MORONS Project
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 
@@ -327,10 +327,10 @@ By following the Gitflow convention, you establish a structured workflow that pr
 16. **Post-Deployment Tasks:**
     - Automate post-deployment tasks like database migrations and cache clearance.
 
-By following this CI/CD convention, you ensure a streamlined and automated process for building, testing, and deploying your MES project while maintaining code quality, consistency, and reliability across different environments.
+By following this CI/CD convention, you ensure a streamlined and automated process for building, testing, and deploying your MORONS project while maintaining code quality, consistency, and reliability across different environments.
 
 
-# Odoo Repository Pattern Best Practices for MES Project
+# Odoo Repository Pattern Best Practices for MORONS Project
 
 Current Pattern: 
 ```mes/
@@ -365,7 +365,7 @@ Current Pattern:
 
 
 1. **Modular Structure:**
-   - Organize your Odoo project into separate modules representing different components or features of the MES system.
+   - Organize your Odoo project into separate modules representing different components or features of the MORONS system.
 
 
 2. **Module Naming Convention:**
@@ -405,7 +405,7 @@ Current Pattern:
     - Organize assets by subdirectories if necessary.
 
 11. **Localization:**
-    - If your MES system targets different regions, handle localization within dedicated modules.
+    - If your MORONS system targets different regions, handle localization within dedicated modules.
     - Localize field labels, views, and reports as needed.
 
 12. **Documentation:**
@@ -439,4 +439,4 @@ Current Pattern:
 20. **Code Review:**
     - Conduct code reviews within your development team to ensure code quality and adherence to conventions.
 
-By following these Odoo repository best practices, you'll create a structured, modular, and maintainable project architecture for your MES system. This approach enhances collaboration, scalability, and code quality throughout the development lifecycle.
+By following these Odoo repository best practices, you'll create a structured, modular, and maintainable project architecture for your MORONS system. This approach enhances collaboration, scalability, and code quality throughout the development lifecycle.
