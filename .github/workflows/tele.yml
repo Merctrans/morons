@@ -19,7 +19,7 @@ jobs:
 
       - name: Notification Failure
         if: failure()
-        uses: hunghg255/action-notifications@master
+        uses: hglong16/action-notifications@master
         with:
           telegram_bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           telegram_chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Notification Success
-        uses: hunghg255/action-notifications@master
+        uses: hglong16/action-notifications@master
         if: always()
         with:
           telegram_bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
