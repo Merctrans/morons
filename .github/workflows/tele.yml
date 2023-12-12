@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Notification Success
-        uses: hglong16/action-notifications@master
+        uses: hglong16/action-notifications@0.0.3d
         if: always()
         with:
           telegram_bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
