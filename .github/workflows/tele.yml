@@ -21,7 +21,7 @@ jobs:
             ${{ github.event.head_commit.message }}
             PR review:   ${{github.event.pull_request.title}}
                          ${{github.event.pull_request.body}}
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            https://github.com/${{ github.repository }}/commit/${{github.sha}}
 
   merge:
     if: ${{ github.event.pull_request.merged }}
