@@ -1,0 +1,37 @@
+name: Telegram
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    types: [opened, reopened, closed]
+    branches: [main, master]
+jobs:
+  job:
+    if: ${{ !github.event.pull_request.merged }}
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.CHATID }}
+          token: ${{ secrets.BOTTOKEN }}
+          message: |
+            ${{ github.actor }} created #${{github.event.number}} on ${{ github.repository }}:
+            ${{ github.event.head_commit.message }}
+            PR review:   ${{github.event.pull_request.title}}
+                         ${{github.event.pull_request.body}}
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
+  merge:
+    if: ${{ github.event.pull_request.merged }}
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on push
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.CHATID }}
+          token: ${{ secrets.BOTTOKEN }}
+          message: |
+            ${{ github.actor }} merged #${{github.event.number}} on ${{ github.repository }}
