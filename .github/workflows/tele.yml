@@ -21,7 +21,6 @@ jobs:
         if: failure()
         uses: hunghg255/action-notifications@master
         with:
-  
           telegram_bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           telegram_chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
           telegram_message_thread_id: ${{ secrets.TELEGRAM_MESSAGE_THREAD_ID }}
