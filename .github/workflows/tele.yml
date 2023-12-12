@@ -33,11 +33,11 @@ jobs:
 
     steps:
       - name: Notification Success
-        uses: hglong16/action-notifications@0.0.5
+        uses: hglong16/action-notifications@0.0.6
         if: always()
         with:
           telegram_bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           telegram_chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
-          telegram_message_thread_id: ${{ secrets.TELEGRAM_MESSAGE_THREAD_ID }}
+          telegram_message_thread_id: "2"
           
          
